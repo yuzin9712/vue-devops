@@ -9,7 +9,7 @@
         </v-btn>
 
         <v-spacer></v-spacer>
-        <!-- <span class="subtitle-2 mr-3">김유진의 블로그</span> -->
+        <span class="subtitle-2 mr-3">김유진의 블로그</span>
 
         <v-responsive max-width="260">
           <v-text-field

@@ -14,12 +14,10 @@ export default {
     };
   },
   created: function () {
-    console.log(this.id);
     this.id = this.$route.params.id;
   },
   watch: {
-    $route: function (to, from) {
-      console.log(from + " " + this.id);
+    $route: function (to) {
       this.id = to.params.id;
     },
   },
