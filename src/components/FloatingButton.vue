@@ -2,7 +2,7 @@
   <div @click="postCreate">
     <post-create></post-create>
     <v-fab-transition>
-      <v-btn color="pink" dark relative bottom fab >
+      <v-btn color="pink" dark relative bottom fab>
         <v-icon>mdi-plus</v-icon>
       </v-btn>
     </v-fab-transition>
@@ -14,7 +14,7 @@ import PostCreate from "./PostCreate.vue";
 export default {
   methods: {
     postCreate: function () {
-        this.$store.dispatch('changeDialog');
+      this.$store.dispatch("changeDialog");
     },
   },
   components: {
@@ -26,9 +26,9 @@ export default {
     };
   },
   computed: {
-      status: function() {
-          return this.dialog;
-      }
-  }
+    status: function () {
+      return this.dialog;
+    },
+  },
 };
 </script>

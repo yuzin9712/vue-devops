@@ -1,13 +1,9 @@
 <template>
-<div class="pa-3">
-
+  <div class="pa-3">
     <h3>글제목</h3>
     <span class="subtitle-2">작성자</span>
-    <div class="body-2">
-        글 내용이 들어갈 거에요~~~
-    </div>
-    
-</div>
+    <div class="body-2">글 내용이 들어갈 거에요~~~</div>
+  </div>
 </template>
 
 <script>

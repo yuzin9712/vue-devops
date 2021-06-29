@@ -8,19 +8,19 @@ export default new Vuex.Store({
     dialog: false,
   },
   getters: {
-    dialogStatus: function(state) {
+    dialogStatus: function (state) {
       return state.dialog;
-    }
+    },
   },
   mutations: {
-    CHANGE_DIALOG: function(state) {
+    CHANGE_DIALOG: function (state) {
       state.dialog = !state.dialog;
-    }
+    },
   },
   actions: {
-    changeDialog: function({commit}) {
-      commit('CHANGE_DIALOG');
-    }
+    changeDialog: function ({ commit }) {
+      commit("CHANGE_DIALOG");
+    },
   },
   modules: {},
 });
