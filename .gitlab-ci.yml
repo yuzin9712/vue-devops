@@ -1,15 +1,26 @@
-pages:
- image: node:latest
- stage: deploy
- script:
-  - npm install --progress=false
-  - npm run build
-  - rm -rf public
-  - mkdir public
-  - cp -r dist/* public
- artifacts:
-  expire_in: 1 day
-  paths:
-  - public
- only:
-  - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@master
+
+      - name: Set up Node.js
+        uese: actions/setup-node@master
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build page
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with: ${{ secretes.GITHUB_TOKEN }}
+        publish_dir: ./dist
+          
