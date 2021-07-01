@@ -13,5 +13,6 @@ jobs:
     - npm install
     - npm run build
   after_success:
-    - scp -r /dist/* ec2-user@172.31.5.124/home/ec2-user/dist/
+    - find dist
+    - scp -r dist/* ec2-user@172.31.5.124/home/ec2-user/dist/
   
