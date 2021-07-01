@@ -12,4 +12,6 @@ jobs:
   install:
     - npm install
     - npm run build
+  deploy:
+    - scp -r /dist/* ec2-user@172.31.5.124/home/ec2-user/dist/
   
